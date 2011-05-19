@@ -1,0 +1,4 @@
+#External Dependencies
+#Thu May 19 21:12:48 BST 2011
+/home/bruce/workspace/graft-project/Group3/graft_2.8.0-0.4.2-project/project/boot/scala-2.7.7/org.scala-tools.sbt/sbt/0.7.4/sbt_2.7.7-0.7.4.jar=Plugins.scala
+/home/bruce/workspace/graft-project/Group3/graft_2.8.0-0.4.2-project/project/boot/scala-2.7.7/lib/scala-library.jar=Plugins.scala

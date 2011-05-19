@@ -1,0 +1,39 @@
+size(600, 600)
+frameRate(1)
+val items = { 0 to width }.view.map { (_, random(255).toInt) }
+val currentPoint = Point(0, 500)
+val width = 500
+var triangleCounter = 0
+
+def draw {
+    // drawTriangle(Point(0,500),Point(500,500), Point(250, (500.0-scala.math.sqrt(3)/2*500).toInt) )
+    drawTriangle(currentPoint, width, triangleCounter)
+    triangleCounter+=1
+}
+  
+case class Point ( val x: Int, val y: Int ) 
+
+def drawTriangle(point: Point, width: Int, level: Int) {
+    level match {
+        case 0 => drawTriangle(point, width)
+        case _ => { 
+            drawTriangle(point, width/2, level-1)
+            drawTriangle(Point(point.x + width/2, point.y), width/2, level-1)
+            drawTriangle(Point(point.x + width/4, (point.y - scala.math.sqrt(3)/4*width).toInt), width/2, level - 1)
+        }
+    }
+}
+
+def drawTriangle(point: Point, width: Int) {
+    val point2 = Point(point.x + width, point.y)
+    val point3 = Point(point.x + width/2, (point.y - scala.math.sqrt(3)/2*width).toInt)
+    drawTriangle(point, point2, point3);
+}
+
+def drawTriangle ( point1: Point, point2: Point, point3: Point ) {
+    lineBetween(point1, point2)
+    lineBetween(point2, point3)
+    lineBetween(point3, point1)
+} 
+
+def lineBetween ( pointA: Point, pointB: Point) = line(pointA.x, pointA.y, pointB.x, pointB.y)
