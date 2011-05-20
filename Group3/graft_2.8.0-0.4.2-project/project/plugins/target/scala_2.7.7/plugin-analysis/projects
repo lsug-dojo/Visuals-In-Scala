@@ -1,5 +1,0 @@
-#Project Definitions
-#Thu May 19 21:13:00 BST 2011
-src_managed/spde-sbt-plugin-0.4.2/VideoProject.scala=spde.DefaultVideoProject\:spde.SampleVideoProject
-src_managed/spde-sbt-plugin-0.4.2/SpdeProject.scala=spde.DefaultSpdeProject
-src_managed/spde-sbt-plugin-0.4.2/OpenGLProject.scala=spde.DefaultOpenGLProject
