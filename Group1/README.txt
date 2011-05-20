@@ -1,3 +1,13 @@
+
+HOW TO:
+
+- kick off sbt in the spde-examples directory
+- type 'project Geometry' in sbt
+- type 'run' in sbt
+
+N.B. we expanded on one of the Geometry example
+
+
 The April 2011 London Scala Dojo
 
 SPDE - Gettng visual with Scala
